@@ -1,0 +1,160 @@
+// RESOURCES
+@import url("https://fonts.googleapis.com/css2?family=Ewert&family=Open+Sans:wght@300;400;600&display=swap");
+
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../content/BebasNeue-Bold.ttf");
+}
+
+:root {
+  --light-color: #ebebeb;
+  --medium-light-color: #c0c0c0;
+  --medium-dark-color: rgb(31, 31, 31);
+  --dark-color: #0f0f0f;
+
+  --primary-font: "Open Sans", sans-serif;
+  --logo-font: "Bebas Neue", cursive;
+}
+
+// RESETS
+body {
+  overflow-x: hidden;
+
+  color: var(--light-color);
+  font-family: var(--primary-font);
+  line-height: 1.4;
+  box-sizing: border-box;
+  background-color: var(--medium-dark-color);
+
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: var(--light-color);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: all 100ms ease-in;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// NAVBAR
+
+nav {
+  position: fixed;
+  width: 100vw;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  align-items: center;
+  justify-content: space-evenly;
+
+  list-style-type: none;
+  background-color: transparent;
+
+  li {
+    display: block;
+    padding: 0.45em 0.45em 0.45em;
+
+    font-size: 1.2rem;
+    font-weight: 300;
+    a {
+      display: block;
+      color: var(--light-color);
+    }
+  }
+}
+
+// MAIN
+main {
+  align-self: center;
+  width: 90%;
+
+  @media only screen and (min-width: 768px) {
+    width: 70%;
+  }
+  @media only screen and (min-width: 1100px) {
+    width: 50%;
+  }
+}
+
+// FOOTER
+#main-footer {
+  justify-self: flex-end;
+
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 2rem 1rem 1rem;
+  background: linear-gradient(180deg, transparent, var(--dark-color) 10%);
+
+  h2 {
+    color: var(--light-color);
+    font-family: var(--logo-font);
+    font-size: 1.3rem;
+
+    flex: 0 1 6em;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-flow: column nowrap;
+
+    flex: 3;
+    justify-self: flex-end;
+
+    li a {
+      color: var(--light-color);
+      font-weight: 300;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  nav ul {
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    padding: 0 1rem;
+
+    li {
+      padding: 1rem;
+    }
+  }
+
+  #main-footer {
+    padding: 2rem 1rem;
+    h2 {
+      flex: 0 1 10em;
+      font-size: 1.5rem;
+    }
+
+    ul {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      li {
+        margin-left: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}

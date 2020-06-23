@@ -1,0 +1,144 @@
+@import "base";
+
+// HERO
+div#banner {
+  height: 102vh;
+  background: linear-gradient(
+      180deg,
+      rgba(31, 31, 31, 0) 98%,
+      rgba(31, 31, 31, 0.8) 99%,
+      rgba(31, 31, 31, 1) 100%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.4) 30%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url("../images/bonzo-bg.jpg") left center/cover;
+
+  @media only screen and (min-width: 1050px) {
+    background: linear-gradient(
+        180deg,
+        rgba(31, 31, 31, 0) 98%,
+        rgba(31, 31, 31, 0.8) 99%,
+        rgba(31, 31, 31, 1) 100%
+      ),
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.2) 20%,
+        rgba(0, 0, 0, 0.6) 40%,
+        rgba(0, 0, 0, 0.75) 60%,
+        rgba(0, 0, 0, 0.9) 100%
+      ),
+      url("../images/bonzo-bg.jpg") center center/cover;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  h1 {
+    font-family: var(--logo-font);
+    color: var(--light-color);
+    font-size: 15vw;
+
+    &:hover {
+      cursor: default;
+    }
+
+    @media only screen and (min-width: 500px) {
+      font-size: 10vw;
+    }
+
+    @media only screen and (min-width: 650px) {
+      font-size: 8vw;
+    }
+
+    @media only screen and (min-width: 900px) {
+      font-size: 6.5vw;
+    }
+  }
+}
+
+// BASE
+main {
+  margin-bottom: 4rem;
+
+  & > * {
+    margin-top: 4rem;
+  }
+
+  h2 {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-align: center;
+
+    @media only screen and (min-width: 900px) {
+      text-align: left;
+      margin-left: -0.2rem;
+    }
+  }
+
+  h3 {
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+  }
+
+  p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+}
+
+// DID YOU KNOW SECTIONS
+.did-you-know {
+  height: 110vh;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+
+  &.wedding {
+    background: url(../images/iommi-wedding.jpg) center center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  &.jason {
+    background: url(../images/jason.jpg) center center/cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  & .did-you-know__text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: radial-gradient(ellipse, rgba(0, 0, 0, 0.8) 10%, transparent),
+      linear-gradient(
+        to bottom,
+        rgba(31, 31, 31, 0) 98%,
+        rgba(31, 31, 31, 1) 100%
+      ),
+      linear-gradient(to top, rgba(31, 31, 31, 0) 98%, rgba(31, 31, 31, 1) 100%);
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.65rem;
+    padding: 0 1rem;
+  }
+  p {
+    font-size: 1.1rem;
+    padding: 0 1rem;
+  }
+}
+
+// QUOTES SECTION
