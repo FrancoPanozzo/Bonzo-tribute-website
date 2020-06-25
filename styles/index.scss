@@ -104,12 +104,22 @@ main {
   margin-left: calc(-50vw + 50%);
 
   &.wedding {
-    background: url(../images/iommi-wedding.jpg) center center/cover;
+    background-image: url(../images/iommi-wedding.jpg);
+    background-position: center center;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
   &.jason {
-    background: url(../images/jason.jpg) center center/cover;
+    background-image: url(../images/jason.jpg);
+    background-position: center center;
+    background-size: cover;
+    -o-background-size: cover;
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
@@ -142,3 +152,35 @@ main {
 }
 
 // QUOTES SECTION
+#quotes blockquote {
+  padding: 2rem 4rem;
+  margin-bottom: 5vh;
+  background-color: #2e2e2e;
+  border-radius: 0 5px 5px 0;
+  border-left: 3px var(--highlight-color) solid;
+
+  @media only screen and (max-width: 600px) {
+    padding: 1rem 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    padding: 1rem 0;
+  }
+  footer {
+    text-align: end;
+  }
+}
+
+// OTHER
+#intro,
+#bio {
+  padding-top: 20vh;
+}
+#bio {
+  padding-bottom: 20vh;
+}
+#drums,
+#death {
+  padding: 25vh 0;
+}
