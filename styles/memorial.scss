@@ -1,1 +1,17 @@
 @import "base";
+
+main {
+  min-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  padding: 0 0 2rem;
+  text-align: center;
+}
