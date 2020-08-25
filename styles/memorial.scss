@@ -1,4 +1,4 @@
-@import "base";
+@import 'base';
 
 main {
   min-height: 95vh;
@@ -9,9 +9,60 @@ main {
   padding: 2rem 0;
 }
 
-h1 {
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  padding: 0 0 2rem;
+main {
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.2) 0%,
+      rgba(0, 0, 0, 0.4) 30%,
+      rgba(0, 0, 0, 0.6) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(../images/bonzo-drums.jpg) center center / cover;
+  width: 100vw;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.key {
+  border: 0.4rem solid black;
+  border-radius: 0.25rem;
+  margin: 0.5rem;
+  font-size: 1.1rem;
+  padding: 0.5rem 0.25rem;
+  transition: all 0.1s ease;
+  width: 7.5rem;
   text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem black;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: var(--highlight-color);
+  box-shadow: 0 0 1rem var(--highlight-color);
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: var(--highlight-color);
 }
